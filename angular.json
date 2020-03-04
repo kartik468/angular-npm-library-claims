@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "customer-claims": {
+      "projectType": "library",
+      "root": "projects/customer-claims",
+      "sourceRoot": "projects/customer-claims/src",
+      "prefix": "claims",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/customer-claims/tsconfig.lib.json",
+            "project": "projects/customer-claims/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/customer-claims/src/test.ts",
+            "tsConfig": "projects/customer-claims/tsconfig.spec.json",
+            "karmaConfig": "projects/customer-claims/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/customer-claims/tsconfig.lib.json",
+              "projects/customer-claims/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "angular-lib-app"
 }

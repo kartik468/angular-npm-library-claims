@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "customer-claims": [
+        "dist/customer-claims"
+      ],
+      "customer-claims/*": [
+        "dist/customer-claims/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
